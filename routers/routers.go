@@ -35,5 +35,16 @@ func InitRouter() *gin.Engine {
 		})
 	})
 
+	r.GET("/get_user/test", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"user_name":      "张三",
+			"user_phone":     "13000001111",
+			"user_hosipital": "天津师范医院",
+			"user_team":      "李四主任团队",
+			"status":         "take_over",
+			"context":        "规范用户",
+		})
+	})
+
 	return r
 }

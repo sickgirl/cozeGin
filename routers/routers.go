@@ -45,6 +45,7 @@ func InitRouter() *gin.Engine {
 				Price:          299.99,
 				OriginalPrice:  399.99,
 				DurationMonths: 12,
+				Desc:           "太原:服务包描述1",
 			},
 			{
 				PackageName:    "稳糖服务包-太原-季包",
@@ -53,6 +54,7 @@ func InitRouter() *gin.Engine {
 				Price:          29.99,
 				OriginalPrice:  39.99,
 				DurationMonths: 3,
+				Desc:           "太原:服务包描述2",
 			},
 			{
 				PackageName:    "稳糖服务包-太原-半年包",
@@ -61,6 +63,7 @@ func InitRouter() *gin.Engine {
 				Price:          129.99,
 				OriginalPrice:  139.99,
 				DurationMonths: 6,
+				Desc:           "太原:服务包描述3",
 			},
 			{
 				PackageName:    "稳糖服务包-太原-月包",
@@ -69,6 +72,7 @@ func InitRouter() *gin.Engine {
 				Price:          19.99,
 				OriginalPrice:  19.99,
 				DurationMonths: 1,
+				Desc:           "太原:服务包描述4",
 			},
 		},
 	}

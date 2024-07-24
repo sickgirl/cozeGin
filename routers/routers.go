@@ -1,6 +1,7 @@
 package routers
 
 import (
+	"coze_gin/parameter"
 	"coze_gin/pkg/setting"
 	"github.com/gin-gonic/gin"
 )
@@ -33,6 +34,47 @@ func InitRouter() *gin.Engine {
 			"status":         "已入组",
 			"context":        "规范用户",
 		})
+	})
+
+	packages := parameter.PkgList{
+		List: []parameter.ServicePackage{
+			{
+				PackageName:    "稳糖服务包-太原-年包",
+				City:           "taiyuan",
+				Sales:          1500,
+				Price:          299.99,
+				OriginalPrice:  399.99,
+				DurationMonths: 12,
+			},
+			{
+				PackageName:    "稳糖服务包-太原-季包",
+				City:           "taiyuan",
+				Sales:          1200,
+				Price:          29.99,
+				OriginalPrice:  39.99,
+				DurationMonths: 3,
+			},
+			{
+				PackageName:    "稳糖服务包-太原-半年包",
+				City:           "taiyuan",
+				Sales:          100,
+				Price:          129.99,
+				OriginalPrice:  139.99,
+				DurationMonths: 6,
+			},
+			{
+				PackageName:    "稳糖服务包-太原-月包",
+				City:           "taiyuan",
+				Sales:          100,
+				Price:          19.99,
+				OriginalPrice:  19.99,
+				DurationMonths: 1,
+			},
+		},
+	}
+
+	r.GET("/get_pkg_list", func(c *gin.Context) {
+		c.JSON(200, packages)
 	})
 
 	return r

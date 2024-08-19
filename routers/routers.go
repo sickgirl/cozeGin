@@ -54,7 +54,7 @@ func InitRouter() *gin.Engine {
 				Price:          29.99,
 				OriginalPrice:  39.99,
 				DurationMonths: 3,
-				Desc:           "太原:服务包描述2",
+				Desc:           "太原:服务包描述22",
 			},
 			{
 				PackageName:    "稳糖服务包-太原-半年包",
